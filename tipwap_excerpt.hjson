@@ -1,0 +1,74 @@
+{
+  type: 'tipwap_excerpt'
+  module: 'tipwap'
+  action: 'excerpt'
+  groupTitle: 'Mr Cheese'
+  groupIcon: 'fas fa-lg fa-cheese comp-exec'
+  title: 'TipWap Excerpt'
+  icon: 'fas fa-lg fa-align-left comp-flows'
+  outputType: 'object'
+  serverModel: ['node']
+
+  help: 'Plain-text excerpt from HTML for cards, meta, or search. Run after TipWap Sanitize HTML and bind {{sanitize.html}}.'
+
+  dataScheme: [
+    {name: 'excerpt', type: 'text'}
+    {name: 'length', type: 'number'}
+  ]
+
+  dataPickObject: true
+
+  properties: [
+    {
+      group: 'TipWap'
+      variables: [
+        {
+          name: 'actionName'
+          optionName: 'name'
+          title: 'Name'
+          type: 'text'
+          required: true
+          defaultValue: ''
+          baseName: 'excerpt'
+        }
+        {
+          name: 'actionOutput'
+          optionName: 'output'
+          title: 'Output'
+          type: 'boolean'
+          initValue: true
+          defaultValue: false
+        }
+        {
+          name: 'html'
+          optionName: 'html'
+          title: 'HTML'
+          type: 'text'
+          serverDataBindings: true
+          defaultValue: ''
+          help: 'Usually {{sanitize.html}}'
+        }
+        {
+          name: 'maxLength'
+          optionName: 'maxLength'
+          title: 'Max length'
+          type: 'numberorstring'
+          defaultValue: 160
+        }
+        {
+          name: 'ellipsis'
+          optionName: 'ellipsis'
+          title: 'Ellipsis'
+          type: 'text'
+          defaultValue: '…'
+        }
+      ]
+    }
+  ]
+
+  usedModules: {
+    node: {
+      'sanitize-html': '^2.14.0'
+    }
+  }
+}

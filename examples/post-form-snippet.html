@@ -1,0 +1,26 @@
+<!-- TipWap editor inside a Wappler form -->
+<form id="postForm" method="post" is="dmx-serverconnect-form" dmx-on:submit="scPost.submit()">
+  <div class="mb-3">
+    <label for="postTitle">Title</label>
+    <input type="text" class="form-control" id="postTitle" name="title" required>
+  </div>
+
+  <dmx-tipwap-editor
+    id="post"
+    field-name="content_post"
+    placeholder="Write your post…"
+    min-height="240"
+    toolbar="full"
+    max-characters="0"
+    enable-tables="true"
+    enable-images="true">
+    <div class="dmx-tipwap-toolbar" data-tipwap-toolbar></div>
+    <div class="dmx-tipwap-mount"></div>
+    <textarea name="content_post" id="content_post_input" class="dmx-tipwap-field" hidden></textarea>
+    <div class="dmx-tipwap-counter" data-tipwap-counter hidden></div>
+  </dmx-tipwap-editor>
+
+  <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+
+<dmx-serverconnect id="scPost" url="/api/posts/create" noload></dmx-serverconnect>

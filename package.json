@@ -1,0 +1,46 @@
+{
+  "name": "wappler-tipwap",
+  "version": "1.1.3",
+  "description": "Wappler rich text editor (TipTap OSS) for App Connect + Server Connect HTML sanitize",
+  "main": "tipwap.js",
+  "homepage": "https://www.mrcheese.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrCheeseGit/Wappler-TipWap-Tiptap-Extension.git"
+  },
+  "keywords": [
+    "wappler",
+    "wappler-extension",
+    "server-connect",
+    "app-connect",
+    "tiptap",
+    "editor",
+    "rich-text",
+    "wysiwyg",
+    "mrcheese"
+  ],
+  "author": "Mr Cheese",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "build:editor": "node scripts/build-tiptap-bundle.mjs"
+  },
+  "wappler": {
+    "module": "tipwap",
+    "version": "1.1.3"
+  },
+  "devDependencies": {
+    "@tiptap/core": "^3.0.0",
+    "@tiptap/extension-character-count": "^3.0.0",
+    "@tiptap/extension-image": "^3.0.0",
+    "@tiptap/extension-placeholder": "^3.0.0",
+    "@tiptap/extension-highlight": "^3.0.0",
+    "@tiptap/extension-table": "^3.0.0",
+    "@tiptap/extension-task-item": "^3.0.0",
+    "@tiptap/extension-task-list": "^3.0.0",
+    "@tiptap/extension-text-align": "^3.0.0",
+    "@tiptap/pm": "^3.0.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "sanitize-html": "^2.14.0"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "id": "tipwap",
+  "name": "TipWap",
+  "version": "1.1.3",
+  "cloneDir": "Wappler-TipWap-Tiptap-Extension",
+  "hasServerConnect": true,
+  "hasAppConnect": true,
+  "readme": "https://github.com/MrCheeseGit/Wappler-TipWap-Tiptap-Extension#installation",
+  "serverConnect": {
+    "directories": [
+      "extensions/server_connect/modules",
+      "lib/modules"
+    ],
+    "copy": [
+      {
+        "src": "tipwap.js",
+        "dest": "lib/modules/tipwap.js"
+      },
+      {
+        "src": "tipwap.js",
+        "dest": "extensions/server_connect/modules/tipwap.js"
+      },
+      {
+        "src": "tipwap_sanitize.hjson",
+        "dest": "extensions/server_connect/modules/tipwap_sanitize.hjson"
+      },
+      {
+        "src": "tipwap_excerpt.hjson",
+        "dest": "extensions/server_connect/modules/tipwap_excerpt.hjson"
+      },
+      {
+        "src": "tipwap_wordcount.hjson",
+        "dest": "extensions/server_connect/modules/tipwap_wordcount.hjson"
+      }
+    ],
+    "notes": [
+      "Copy tipwap.js to both lib/modules/ and extensions/server_connect/modules/.",
+      "Wappler installs sanitize-html via usedModules on first API run.",
+      "Quit Wappler completely and restart."
+    ]
+  },
+  "appConnect": {
+    "directories": [
+      "extensions/app_connect/components",
+      "public/js",
+      "public/css"
+    ],
+    "copy": [
+      {
+        "src": "app_connect/components.hjson",
+        "dest": "extensions/app_connect/components/tipwap_components.hjson"
+      },
+      {
+        "src": "app_connect/includes/dmx-tipwap-editor.js",
+        "dest": "public/js/dmx-tipwap-editor.js"
+      },
+      {
+        "src": "app_connect/includes/dmx-tipwap-editor.css",
+        "dest": "public/css/dmx-tipwap-editor.css"
+      },
+      {
+        "src": "app_connect/includes/dmx-tipwap-editor.bundle.js",
+        "dest": "public/js/dmx-tipwap-editor.bundle.js"
+      }
+    ],
+    "notes": [
+      "Place dmx-tipwap-editor inside each form on the page.",
+      "Or install via Wappler Project Settings \u2192 Extensions (npm): verify node_modules, run the npm install assistant copy script, then Project Updater.",
+      "Quit Wappler completely and reopen."
+    ]
+  }
+}

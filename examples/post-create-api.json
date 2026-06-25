@@ -1,0 +1,55 @@
+{
+  "exec": {
+    "steps": [
+      {
+        "name": "sanitize",
+        "module": "tipwap",
+        "action": "sanitize",
+        "options": {
+          "html": "{{$_POST.content_post}}",
+          "mode": "standard",
+          "maxLength": 0
+        },
+        "output": true,
+        "outputType": "object",
+        "meta": [
+          { "name": "html", "type": "text" },
+          { "name": "plainText", "type": "text" },
+          { "name": "length", "type": "number" },
+          { "name": "wordCount", "type": "number" },
+          { "name": "stripped", "type": "boolean" }
+        ]
+      },
+      {
+        "name": "excerpt",
+        "module": "tipwap",
+        "action": "excerpt",
+        "options": {
+          "html": "{{sanitize.html}}",
+          "maxLength": 160,
+          "ellipsis": "…"
+        },
+        "output": true,
+        "outputType": "object",
+        "meta": [
+          { "name": "excerpt", "type": "text" },
+          { "name": "length", "type": "number" }
+        ]
+      },
+      {
+        "name": "wordCount",
+        "module": "tipwap",
+        "action": "wordcount",
+        "options": {
+          "html": "{{sanitize.html}}"
+        },
+        "output": true,
+        "outputType": "object",
+        "meta": [
+          { "name": "words", "type": "number" },
+          { "name": "characters", "type": "number" }
+        ]
+      }
+    ]
+  }
+}
