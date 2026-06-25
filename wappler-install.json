@@ -66,7 +66,7 @@
     ],
     "notes": [
       "Place dmx-tipwap-editor inside each form on the page.",
-      "Or install via Wappler Project Settings \u2192 Extensions (npm): verify node_modules, run the npm install assistant copy script, then Project Updater.",
+      "npm: Project Settings → Extensions, npm install, Project Updater, then quit Wappler completely and reopen.",
       "Quit Wappler completely and reopen."
     ]
   }
