@@ -1,199 +1,224 @@
 {
-  components: [
+  "components": [
     {
-      type: 'dmx-tipwap-editor'
-      selector: 'dmx-tipwap-editor, [is=dmx-tipwap-editor]'
-      framework: 'bootstrap5'
-      groupTitle: 'Mr Cheese'
-      groupIcon: 'fas fa-lg fa-cheese comp-exec'
-      title: 'TipWap Editor: @@id@@'
-      icon: 'fas fa-lg fa-pen-to-square comp-data'
-      state: 'opened'
-      anyParent: true
-      template: '<dmx-tipwap-editor id="@@id@@" field-name="content_@@id@@" placeholder="Write here…" min-height="200" toolbar="full" heading-levels="2,3" max-characters="0" enable-tables="true" enable-images="true" enable-source-view="false" enable-text-align="true" enable-highlight="true" enable-task-lists="true" enable-table-tools="true"><div class="dmx-tipwap-toolbar" data-tipwap-toolbar></div><div class="dmx-tipwap-mount"></div><div class="dmx-tipwap-source-wrap" data-tipwap-source-wrap hidden><textarea class="dmx-tipwap-source" data-tipwap-source spellcheck="false" aria-label="HTML source"></textarea></div><textarea name="content_@@id@@" id="content_@@id@@_input" class="dmx-tipwap-field" hidden></textarea><div class="dmx-tipwap-counter" data-tipwap-counter hidden></div></dmx-tipwap-editor>'
-      baseName: 'tipwapEditor'
-      help: 'Rich text editor (MIT TipTap). Place inside a form. field-name must match $_POST on your API. Run TipWap Sanitize HTML on the server before insert. External image URLs require matching Helmet CSP img-src hosts (see TipWap README).'
-
-      properties: [
+      "type": "dmx-tipwap-editor",
+      "selector": "dmx-tipwap-editor, [is=dmx-tipwap-editor]",
+      "framework": "bootstrap5",
+      "groupTitle": "Mr Cheese",
+      "groupIcon": "fas fa-lg fa-cheese comp-exec",
+      "title": "TipWap Editor: @@id@@",
+      "icon": "fas fa-lg fa-pen-to-square comp-data",
+      "state": "opened",
+      "anyParent": true,
+      "template": "<dmx-tipwap-editor id=\"@@id@@\" field-name=\"content_@@id@@\" placeholder=\"Write here…\" min-height=\"200\" toolbar=\"full\" heading-levels=\"2,3\" max-characters=\"0\" enable-tables=\"true\" enable-images=\"true\" enable-source-view=\"false\" enable-text-align=\"true\" enable-highlight=\"true\" enable-task-lists=\"true\" enable-table-tools=\"true\"><div class=\"dmx-tipwap-toolbar\" data-tipwap-toolbar></div><div class=\"dmx-tipwap-mount\"></div><div class=\"dmx-tipwap-source-wrap\" data-tipwap-source-wrap hidden><textarea class=\"dmx-tipwap-source\" data-tipwap-source spellcheck=\"false\" aria-label=\"HTML source\"></textarea></div><textarea name=\"content_@@id@@\" id=\"content_@@id@@_input\" class=\"dmx-tipwap-field\" hidden></textarea><div class=\"dmx-tipwap-counter\" data-tipwap-counter hidden></div></dmx-tipwap-editor>",
+      "baseName": "tipwapEditor",
+      "help": "Rich text editor (MIT TipTap). Place inside a form. field-name must match $_POST on your API. Run TipWap Sanitize HTML on the server before insert. External image URLs require matching Helmet CSP img-src hosts (see TipWap README).",
+      "properties": [
         {
-          group: 'TipWap Editor'
-          variables: [
+          "group": "TipWap Editor",
+          "variables": [
             {
-              name: 'compId'
-              optionName: 'id'
-              attribute: 'id'
-              title: 'ID'
-              type: 'text'
-              required: true
-              defaultValue: ''
-            }
+              "name": "compId",
+              "optionName": "id",
+              "attribute": "id",
+              "title": "ID",
+              "type": "text",
+              "required": true,
+              "defaultValue": ""
+            },
             {
-              name: 'fieldName'
-              optionName: 'fieldName'
-              attribute: 'field-name'
-              title: 'Field name'
-              type: 'text'
-              defaultValue: 'content_@@id@@'
-              help: 'POST name for the hidden textarea. Bind the same name in TipWap Sanitize (e.g. {{$_POST.content_body}}).'
-            }
+              "name": "fieldName",
+              "optionName": "fieldName",
+              "attribute": "field-name",
+              "title": "Field name",
+              "type": "text",
+              "defaultValue": "content_@@id@@",
+              "help": "POST name for the hidden textarea. Bind the same name in TipWap Sanitize (e.g. {{$_POST.content_body}})."
+            },
             {
-              name: 'placeholder'
-              optionName: 'placeholder'
-              attribute: 'placeholder'
-              title: 'Placeholder'
-              type: 'text'
-              defaultValue: 'Write here…'
-            }
+              "name": "placeholder",
+              "optionName": "placeholder",
+              "attribute": "placeholder",
+              "title": "Placeholder",
+              "type": "text",
+              "defaultValue": "Write here…"
+            },
             {
-              name: 'minHeight'
-              optionName: 'minHeight'
-              attribute: 'min-height'
-              title: 'Min height (px)'
-              type: 'number'
-              defaultValue: 200
-            }
+              "name": "minHeight",
+              "optionName": "minHeight",
+              "attribute": "min-height",
+              "title": "Min height (px)",
+              "type": "number",
+              "defaultValue": 200
+            },
             {
-              name: 'toolbar'
-              optionName: 'toolbar'
-              attribute: 'toolbar'
-              title: 'Toolbar'
-              type: 'droplist'
-              defaultValue: 'full'
-              values: [
-                {title: 'Full (tables + images)', value: 'full'}
-                {title: 'Minimal', value: 'minimal'}
+              "name": "toolbar",
+              "optionName": "toolbar",
+              "attribute": "toolbar",
+              "title": "Toolbar",
+              "type": "droplist",
+              "defaultValue": "full",
+              "values": [
+                {
+                  "title": "Full (tables + images)",
+                  "value": "full"
+                },
+                {
+                  "title": "Minimal",
+                  "value": "minimal"
+                }
               ]
-            }
+            },
             {
-              name: 'headingLevels'
-              optionName: 'headingLevels'
-              attribute: 'heading-levels'
-              title: 'Heading levels'
-              type: 'text'
-              defaultValue: '2,3'
-            }
+              "name": "headingLevels",
+              "optionName": "headingLevels",
+              "attribute": "heading-levels",
+              "title": "Heading levels",
+              "type": "text",
+              "defaultValue": "2,3"
+            },
             {
-              name: 'maxCharacters'
-              optionName: 'maxCharacters'
-              attribute: 'max-characters'
-              title: 'Max characters (0 = off)'
-              type: 'number'
-              defaultValue: 0
-            }
+              "name": "maxCharacters",
+              "optionName": "maxCharacters",
+              "attribute": "max-characters",
+              "title": "Max characters (0 = off)",
+              "type": "number",
+              "defaultValue": 0
+            },
             {
-              name: 'enableTables'
-              optionName: 'enableTables'
-              attribute: 'enable-tables'
-              title: 'Enable tables'
-              type: 'boolean'
-              defaultValue: true
-            }
+              "name": "enableTables",
+              "optionName": "enableTables",
+              "attribute": "enable-tables",
+              "title": "Enable tables",
+              "type": "boolean",
+              "defaultValue": true
+            },
             {
-              name: 'enableImages'
-              optionName: 'enableImages'
-              attribute: 'enable-images'
-              title: 'Enable images (URL)'
-              type: 'boolean'
-              defaultValue: true
-              help: 'Authors paste an image URL. The host must be allowed in app/config Helmet CSP img-src, or the browser blocks the image in the editor and on the live site. Prefer uploads to your own /public or CDN. See TipWap README → CSP and external images.'
-            }
+              "name": "enableImages",
+              "optionName": "enableImages",
+              "attribute": "enable-images",
+              "title": "Enable images (URL)",
+              "type": "boolean",
+              "defaultValue": true,
+              "help": "Authors paste an image URL. The host must be allowed in app/config Helmet CSP img-src, or the browser blocks the image in the editor and on the live site. Prefer uploads to your own /public or CDN. See TipWap README → CSP and external images."
+            },
             {
-              name: 'enableSourceView'
-              optionName: 'enableSourceView'
-              attribute: 'enable-source-view'
-              title: 'Enable HTML source view'
-              type: 'boolean'
-              defaultValue: false
-              help: 'Toolbar button toggles visual editor and raw HTML textarea. Authors can paste markup; always run TipWap Sanitize on the server.'
-            }
+              "name": "enableSourceView",
+              "optionName": "enableSourceView",
+              "attribute": "enable-source-view",
+              "title": "Enable HTML source view",
+              "type": "boolean",
+              "defaultValue": false,
+              "help": "Toolbar button toggles visual editor and raw HTML textarea. Authors can paste markup; always run TipWap Sanitize on the server."
+            },
             {
-              name: 'enableTextAlign'
-              optionName: 'enableTextAlign'
-              attribute: 'enable-text-align'
-              title: 'Enable text align'
-              type: 'boolean'
-              defaultValue: true
-              help: 'Left, center, right, and justify (full toolbar only).'
-            }
+              "name": "enableTextAlign",
+              "optionName": "enableTextAlign",
+              "attribute": "enable-text-align",
+              "title": "Enable text align",
+              "type": "boolean",
+              "defaultValue": true,
+              "help": "Left, center, right, and justify (full toolbar only)."
+            },
             {
-              name: 'enableHighlight'
-              optionName: 'enableHighlight'
-              attribute: 'enable-highlight'
-              title: 'Enable highlight'
-              type: 'boolean'
-              defaultValue: true
-              help: 'Text highlight mark (full toolbar only).'
-            }
+              "name": "enableHighlight",
+              "optionName": "enableHighlight",
+              "attribute": "enable-highlight",
+              "title": "Enable highlight",
+              "type": "boolean",
+              "defaultValue": true,
+              "help": "Text highlight mark (full toolbar only)."
+            },
             {
-              name: 'enableTaskLists'
-              optionName: 'enableTaskLists'
-              attribute: 'enable-task-lists'
-              title: 'Enable task lists'
-              type: 'boolean'
-              defaultValue: true
-              help: 'Checklist items (full toolbar only).'
-            }
+              "name": "enableTaskLists",
+              "optionName": "enableTaskLists",
+              "attribute": "enable-task-lists",
+              "title": "Enable task lists",
+              "type": "boolean",
+              "defaultValue": true,
+              "help": "Checklist items (full toolbar only)."
+            },
             {
-              name: 'enableTableTools'
-              optionName: 'enableTableTools'
-              attribute: 'enable-table-tools'
-              title: 'Enable table tools'
-              type: 'boolean'
-              defaultValue: true
-              help: 'Add/remove rows and columns when tables are enabled (full toolbar only).'
-            }
+              "name": "enableTableTools",
+              "optionName": "enableTableTools",
+              "attribute": "enable-table-tools",
+              "title": "Enable table tools",
+              "type": "boolean",
+              "defaultValue": true,
+              "help": "Add/remove rows and columns when tables are enabled (full toolbar only)."
+            },
             {
-              name: 'initialHtml'
-              optionName: 'initialHtml'
-              attribute: 'initial-html'
-              title: 'Initial HTML'
-              type: 'textarea'
-              dataBindings: true
-              defaultValue: ''
+              "name": "initialHtml",
+              "optionName": "initialHtml",
+              "attribute": "initial-html",
+              "title": "Initial HTML",
+              "type": "textarea",
+              "dataBindings": true,
+              "defaultValue": ""
             }
           ]
         }
+      ],
+      "children": [],
+      "allowed_children": {},
+      "copyFiles": [
+        {
+          "src": "includes/dmx-tipwap-editor.js",
+          "dst": "js/dmx-tipwap-editor.js"
+        },
+        {
+          "src": "includes/dmx-tipwap-editor.css",
+          "dst": "css/dmx-tipwap-editor.css"
+        },
+        {
+          "src": "includes/dmx-tipwap-editor.bundle.js",
+          "dst": "js/dmx-tipwap-editor.bundle.js"
+        }
+      ],
+      "linkFiles": [
+        {
+          "src": "css/dmx-tipwap-editor.css",
+          "type": "css"
+        },
+        {
+          "src": "js/dmx-tipwap-editor.js",
+          "type": "js",
+          "defer": true
+        }
+      ],
+      "cssOrder": [
+        "dmx-tipwap-editor.css"
+      ],
+      "jsOrder": [
+        "dmx-tipwap-editor.js"
       ]
-
-      children: []
-      allowed_children: {}
-
-      copyFiles: [
-        {src: 'includes/dmx-tipwap-editor.js', dst: 'js/dmx-tipwap-editor.js'}
-        {src: 'includes/dmx-tipwap-editor.css', dst: 'css/dmx-tipwap-editor.css'}
-        {src: 'includes/dmx-tipwap-editor.bundle.js', dst: 'js/dmx-tipwap-editor.bundle.js'}
-      ]
-
-      linkFiles: [
-        {src: 'css/dmx-tipwap-editor.css', type: 'css'}
-        {src: 'js/dmx-tipwap-editor.js', type: 'js', defer: true}
-      ]
-
-      cssOrder: ['dmx-tipwap-editor.css']
-      jsOrder: ['dmx-tipwap-editor.js']
     }
-  ]
-
-  attributes: []
-
-  events: [
+  ],
+  "attributes": [],
+  "events": [
     {
-      name: 'dmx-tipwap-editor-ready'
-      attribute: 'ready'
-      title: 'Ready'
-      allowedOn: {'dmx-tipwap-editor': true}
-    }
+      "name": "dmx-tipwap-editor-ready",
+      "attribute": "ready",
+      "title": "Ready",
+      "allowedOn": {
+        "dmx-tipwap-editor": true
+      }
+    },
     {
-      name: 'dmx-tipwap-editor-change'
-      attribute: 'change'
-      title: 'Change'
-      allowedOn: {'dmx-tipwap-editor': true}
-    }
+      "name": "dmx-tipwap-editor-change",
+      "attribute": "change",
+      "title": "Change",
+      "allowedOn": {
+        "dmx-tipwap-editor": true
+      }
+    },
     {
-      name: 'dmx-tipwap-editor-blur'
-      attribute: 'blur'
-      title: 'Blur'
-      allowedOn: {'dmx-tipwap-editor': true}
+      "name": "dmx-tipwap-editor-blur",
+      "attribute": "blur",
+      "title": "Blur",
+      "allowedOn": {
+        "dmx-tipwap-editor": true
+      }
     }
   ]
 }

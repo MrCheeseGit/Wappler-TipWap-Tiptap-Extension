@@ -14,23 +14,23 @@
     ],
     "copy": [
       {
-        "src": "tipwap.js",
+        "src": "server_connect/modules/tipwap.js",
         "dest": "lib/modules/tipwap.js"
       },
       {
-        "src": "tipwap.js",
+        "src": "server_connect/modules/tipwap.js",
         "dest": "extensions/server_connect/modules/tipwap.js"
       },
       {
-        "src": "tipwap_sanitize.hjson",
+        "src": "server_connect/modules/tipwap_sanitize.hjson",
         "dest": "extensions/server_connect/modules/tipwap_sanitize.hjson"
       },
       {
-        "src": "tipwap_excerpt.hjson",
+        "src": "server_connect/modules/tipwap_excerpt.hjson",
         "dest": "extensions/server_connect/modules/tipwap_excerpt.hjson"
       },
       {
-        "src": "tipwap_wordcount.hjson",
+        "src": "server_connect/modules/tipwap_wordcount.hjson",
         "dest": "extensions/server_connect/modules/tipwap_wordcount.hjson"
       }
     ],
@@ -52,15 +52,15 @@
         "dest": "extensions/app_connect/components/tipwap_components.hjson"
       },
       {
-        "src": "app_connect/includes/dmx-tipwap-editor.js",
+        "src": "includes/dmx-tipwap-editor.js",
         "dest": "public/js/dmx-tipwap-editor.js"
       },
       {
-        "src": "app_connect/includes/dmx-tipwap-editor.css",
+        "src": "includes/dmx-tipwap-editor.css",
         "dest": "public/css/dmx-tipwap-editor.css"
       },
       {
-        "src": "app_connect/includes/dmx-tipwap-editor.bundle.js",
+        "src": "includes/dmx-tipwap-editor.bundle.js",
         "dest": "public/js/dmx-tipwap-editor.bundle.js"
       }
     ],

@@ -1,0 +1,72 @@
+{
+  "type": "tipwap_wordcount",
+  "module": "tipwap",
+  "action": "wordcount",
+  "groupTitle": "Mr Cheese",
+  "groupIcon": "fas fa-lg fa-cheese comp-exec",
+  "title": "TipWap Word Count",
+  "icon": "fas fa-lg fa-hashtag comp-flows",
+  "outputType": "object",
+  "serverModel": [
+    "node"
+  ],
+  "help": "Word and character count from HTML or plain text. Use in Conditions (e.g. minimum words).",
+  "dataScheme": [
+    {
+      "name": "words",
+      "type": "number"
+    },
+    {
+      "name": "characters",
+      "type": "number"
+    }
+  ],
+  "dataPickObject": true,
+  "properties": [
+    {
+      "group": "TipWap",
+      "variables": [
+        {
+          "name": "actionName",
+          "optionName": "name",
+          "title": "Name",
+          "type": "text",
+          "required": true,
+          "defaultValue": "",
+          "baseName": "wordCount"
+        },
+        {
+          "name": "actionOutput",
+          "optionName": "output",
+          "title": "Output",
+          "type": "boolean",
+          "initValue": true,
+          "defaultValue": false
+        },
+        {
+          "name": "html",
+          "optionName": "html",
+          "title": "HTML",
+          "type": "text",
+          "serverDataBindings": true,
+          "defaultValue": "",
+          "help": "Bind {{sanitize.html}} or raw POST"
+        },
+        {
+          "name": "text",
+          "optionName": "text",
+          "title": "Plain text (optional)",
+          "type": "text",
+          "serverDataBindings": true,
+          "defaultValue": "",
+          "help": "Leave empty when using HTML"
+        }
+      ]
+    }
+  ],
+  "usedModules": {
+    "node": {
+      "sanitize-html": "^2.14.0"
+    }
+  }
+}

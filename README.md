@@ -99,16 +99,16 @@ Run from your **Wappler project root** (the folder that contains `package.json`)
 ```bash
 git clone https://github.com/MrCheeseGit/Wappler-TipWap-Tiptap-Extension.git ../Wappler-TipWap-Tiptap-Extension
 
-cp ../Wappler-TipWap-Tiptap-Extension/tipwap_sanitize.hjson extensions/server_connect/modules/
+cp ../Wappler-TipWap-Tiptap-Extension/server_connect/modules/tipwap_sanitize.hjson extensions/server_connect/modules/
 cp ../Wappler-TipWap-Tiptap-Extension/tipwap_excerpt.hjson extensions/server_connect/modules/
 cp ../Wappler-TipWap-Tiptap-Extension/tipwap_wordcount.hjson extensions/server_connect/modules/
-cp ../Wappler-TipWap-Tiptap-Extension/tipwap.js lib/modules/
-cp ../Wappler-TipWap-Tiptap-Extension/tipwap.js extensions/server_connect/modules/
+cp ../Wappler-TipWap-Tiptap-Extension/server_connect/modules/tipwap.js lib/modules/
+cp ../Wappler-TipWap-Tiptap-Extension/server_connect/modules/tipwap.js extensions/server_connect/modules/
 
 cp ../Wappler-TipWap-Tiptap-Extension/app_connect/components.hjson extensions/app_connect/components/tipwap_components.hjson
-cp ../Wappler-TipWap-Tiptap-Extension/app_connect/includes/dmx-tipwap-editor.js public/js/
-cp ../Wappler-TipWap-Tiptap-Extension/app_connect/includes/dmx-tipwap-editor.css public/css/
-cp ../Wappler-TipWap-Tiptap-Extension/app_connect/includes/dmx-tipwap-editor.bundle.js public/js/
+cp ../Wappler-TipWap-Tiptap-Extension/includes/dmx-tipwap-editor.js public/js/
+cp ../Wappler-TipWap-Tiptap-Extension/includes/dmx-tipwap-editor.css public/css/
+cp ../Wappler-TipWap-Tiptap-Extension/includes/dmx-tipwap-editor.bundle.js public/js/
 ```
 
 **Quit Wappler completely and restart.**

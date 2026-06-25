@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const outFile = path.join(root, 'app_connect/includes/dmx-tipwap-editor.bundle.js');
+const outFile = path.join(root, 'includes/dmx-tipwap-editor.bundle.js');
 
 await esbuild.build({
     entryPoints: [path.join(__dirname, 'tiptap-bundle-entry.js')],
