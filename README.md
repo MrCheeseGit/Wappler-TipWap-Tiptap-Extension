@@ -5,7 +5,7 @@
 
 [![License: Mr Cheese Extension v1.0](https://img.shields.io/badge/License-Mr%20Cheese%20Extension%20v1.0-blue.svg)](https://www.mrcheese.co.uk/extension-license)
 ![Wappler](https://img.shields.io/badge/Wappler-App%20%2B%20Server%20Connect-teal)
-![Version](https://img.shields.io/badge/version-1%2E1%2E6-green)
+![Version](https://img.shields.io/badge/version-1%2E1%2E7-green)
 
 Built by **[Mr Cheese](https://www.mrcheese.co.uk)** · Wappler extensions & open source
 
@@ -64,14 +64,12 @@ In the **TipWap Editor** property group on each instance:
 
 ## Installation
 
-Pick **one** install path and follow it completely:
+| Path | |
+|------|--|
+| **npm** | Wappler Project Settings → Extensions (`wappler-tipwap`) |
+| **Git** | [Extension Installer](https://www.mrcheese.co.uk/extensions/install) or manual copy below |
 
-| Path | Best for |
-|------|----------|
-| **Git** (recommended) | Most reliable; uses `git clone` + copy from the repo |
-| **npm** | You already use Wappler Project Settings → Extensions |
-
-Both paths copy files into `extensions/`, `lib/modules/`, and `public/`. The npm path also requires verifying `node_modules/wappler-tipwap` exists **before** you run any copy commands.
+Git manual copy installs into `extensions/`, `lib/modules/`, and `public/`.
 
 ### Git install — Extension Installer (recommended)
 
