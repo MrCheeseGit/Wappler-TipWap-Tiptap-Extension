@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.3
+## 1.1.4
 
 Current release of **TipWap**. See [README](README.md) for features, installation, and usage.
 
